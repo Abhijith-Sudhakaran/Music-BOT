@@ -1,9 +1,4 @@
-# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
-# Without Credit (Mother Fucker)
-# Rocks © @Dr_Asad_Ali © Rocks
-# Copyright (C) 2021 By @Itz_VeNom_xD 
-# Copyright (C) 2021 By @Dr_Asad_Ali
-# Copyright (C) 2021 By @HarshitSharma361
+
 
 import os
 import aiofiles
@@ -87,17 +82,6 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image6 = image4.convert("RGBA")
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
-    draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("resource/font.otf", 32)
-    draw.text((190, 550), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
-    draw.text((190, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
-    draw.text(
-        (190, 670),
-        f"Powered By: Rocks Asad And Harshit",
-        (255, 255, 255),
-        font=font,
-    )
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
@@ -146,12 +130,12 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 ᴘʟᴇᴀsᴡ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Dr_Asad_Ali 🥀** ")
+                        f"**🎸 ᴘʟᴇᴀsᴡ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Telecat_X 🥀** ")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 ᴘʟᴇᴀsᴇ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Dr_Asad_Ali 🥀 ...*")
+            f"**🎸 ᴘʟᴇᴀsᴇ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Telecat_X 🥀 ...*")
         return
     
     audio = (
@@ -169,7 +153,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/d2474446333064333a8a0.png"
+        thumb_name = "https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -177,8 +161,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/Shayri_Music_Lovers"),
+                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
@@ -214,22 +198,22 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/Shayri_Music_Lovers"),
+                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/d2474446333064333a8a0.png"
+            thumb_name = "https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/Shayri_Music_Lovers"),
+                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
@@ -280,8 +264,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/Shayri_Music_Lovers"),
+                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
@@ -332,7 +316,7 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/c87a11663d606d0204f98.jpg", 
+                             photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
                              caption="**💥 Aʟᴇxᴀ🔈 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n▶️ ᴘᴀᴜsᴇᴅ ᴛᴏ ʀᴇsᴜᴍᴇ /resume 🌷 ...**"
     )
 
@@ -343,7 +327,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/1653cb38437d8ee4c6364.jpg", 
+                             photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
                              caption="**💥 Aʟᴇxᴀ 🔈 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n⏸ Rᴇsᴜᴍᴇᴅ ᴛᴏ ᴘᴀᴜsᴇ /pause 🌷 ...**"
     )
 
@@ -411,6 +395,6 @@ async def admincache(client, message: Message):
     )
 
     await message.reply_photo(
-                              photo="https://telegra.ph/file/b92ed11ca9259ec96aaee.jpg",
+                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png",
                               caption="**💥 Aʟᴇxᴀ 🔈 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n🔥 Rᴇʟᴏᴀᴅᴇᴅ 🌷 ...**"
     )
