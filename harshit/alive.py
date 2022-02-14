@@ -35,18 +35,18 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/5992b108a38a235f4c9e4.jpg",
+        photo=f"https://telegra.ph/file/23a2947b842a294c9312b.jpg",
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
 Hellow {message.from_user.mention()} ❤️
 **I am Geethu🥀, A bot for playing Songs in Your Telegram Video chat...
 
-💞 Created by [Telecat🌷](https://t.me/Telecat_X) ...
+💞 Created by [Telecat🌷](https://t.me/readmeab) ...
 ━━━━━━━━━━━━━━━━━━━━━━━━**""",
    reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Owner 🌷➕", url=f"https://t.me/Telecat_X")
+                        "➕ Owner 🌷➕", url=f"https://t.me/readmeab")
                 ]
                 
            ]
@@ -54,7 +54,7 @@ Hellow {message.from_user.mention()} ❤️
     )
     
     
-@Client.on_message(commandpro(["/start", "/alive", "Alexa"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/start", "/alive", "Geethu"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/5992b108a38a235f4c9e4.jpg",
@@ -63,7 +63,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Updates 💞", url=f"https://t.me/GEETHUBOTUPDATES")
+                        "Updates 💞", url=f"https://t.me/CatBotzUpdates")
                 ]
             ]
         ),
@@ -73,7 +73,7 @@ async def start(client: Client, message: Message):
 @Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/5992b108a38a235f4c9e4.jpg",
+        photo=f"https://telegra.ph/file/f647959deffdff3f6acb3.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
