@@ -19,6 +19,8 @@ from youtube_search import YoutubeSearch
 from rocks import converter
 from rocks.downloaders import youtube
 from rocks.config import DURATION_LIMIT, que, SUDO_USERS
+from rocks.config import BOT_NAME as bn
+from rocks.config import ASSISTANT_NAME as an
 from rocks.cache.admins import admins as a
 from rocks.helpers.filters import command, other_filters
 from rocks.helpers.command import commandpro
@@ -118,24 +120,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 ᴀᴛ 🤞 ғɪʀsᴛ 🥀 ᴍᴀᴋᴇ ♥️ ᴍᴇ ⭐ ᴀᴅᴍɪɴ 😎 ...**")
+                        "****")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** 😎 ɪ 🤞 ᴊᴏɪɴᴅ 🥀 ʜᴇʀᴇ ♥️ ᴛᴏ ⭐ ᴘʟᴀʏ ᴍᴜsɪᴄ 😎 ...**")
+                        message.chat.id, "**𝘐 𝘯𝘦𝘦𝘥 𝘈𝘥𝘮𝘪𝘯 𝘗𝘦𝘳𝘮𝘪𝘴𝘴𝘪𝘰𝘯 𝘵𝘰 𝘗𝘦𝘳𝘧𝘰𝘳𝘮 𝘵𝘩𝘪𝘴 𝘈𝘤𝘵𝘪𝘰𝘯...🤗**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 ᴘʟᴇᴀsᴡ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Telecat_X 🥀** ")
+                        f"**𝘗𝘭𝘦𝘢𝘴𝘦 𝘈𝘥𝘥 `{an}` 𝘔𝘢𝘯𝘶𝘢𝘭𝘭𝘺 𝘰𝘳 𝘊𝘰𝘯𝘵𝘢𝘤𝘵 : @readmeab ** ")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 ᴘʟᴇᴀsᴇ ❤️ ᴍᴀɴᴜᴀʟʟʏ 🥀 ᴀᴅᴅ 💫 ᴀssɪsᴛᴀɴᴛ 😔 ᴏʀ 🎸 ᴄᴏɴᴛᴀᴄᴛ ❤️ ᴛᴏ : @Telecat_X 🥀 ...*")
+            f"**𝘗𝘭𝘦𝘢𝘴𝘦 𝘈𝘥𝘥 `{an}` 𝘔𝘢𝘯𝘶𝘢𝘭𝘭𝘺 𝘰𝘳 𝘊𝘰𝘯𝘵𝘢𝘤𝘵 : @readmeab ...*")
         return
     
     audio = (
@@ -148,7 +150,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**💥 ᴘʟᴀʏ 🔊 ᴍᴜsɪᴄ 💿 ʟᴇss ⚡️\n🤟 ᴛʜᴀɴ ⚡️ {DURATION_LIMIT} 💞 ᴍɪɴᴜᴛᴇs ...**"
+                f"**𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘌𝘳𝘳𝘰𝘳 : 𝘜𝘯𝘢𝘣𝘭𝘦 𝘵𝘰 𝘗𝘭𝘢𝘺 𝘚𝘰𝘯𝘨𝘴 𝘔𝘰𝘳𝘦 𝘛𝘩𝘢𝘯 {DURATION_LIMIT} 𝘔𝘪𝘯𝘶𝘵𝘦𝘴...**"
             )
 
         file_name = get_file_name(audio)
@@ -161,8 +163,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
+                InlineKeyboardButton("𝘾𝙧𝙚𝙖𝙩𝙤𝙧", url=f"https://t.me/readmeab"),
+                InlineKeyboardButton("𝙂𝙧𝙤𝙪𝙥", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
@@ -198,8 +200,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
+                InlineKeyboardButton("𝘾𝙧𝙚𝙖𝙩𝙤𝙧", url=f"https://t.me/readmeab"),
+                InlineKeyboardButton("𝙂𝙧𝙤𝙪𝙥", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
@@ -212,15 +214,15 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
+                InlineKeyboardButton("𝘾𝙧𝙚𝙖𝙩𝙤𝙧", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("𝙂𝙧𝙤𝙪𝙥", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 ᴘʟᴀʏ 🔊 ᴍᴜsɪᴄ 💿 ʟᴇss ⚡️\n🤟 ᴛʜᴀɴ ⚡️ {DURATION_LIMIT} 💞 ᴍɪɴᴜᴛᴇs ...**"
+                f"**𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘌𝘳𝘳𝘰𝘳 : 𝘜𝘯𝘢𝘣𝘭𝘦 𝘵𝘰 𝘗𝘭𝘢𝘺 𝘚𝘰𝘯𝘨𝘴 𝘔𝘰𝘳𝘦 𝘛𝘩𝘢𝘯 {DURATION_LIMIT} 𝘔𝘪𝘯𝘶𝘵𝘦𝘴...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -229,9 +231,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "**🤖 Gɪᴠᴇ 🙃 ᴍᴇ 💿 sᴏᴍᴇᴛʜɪɴɢ 😍\n💞 ᴛᴏ 🔊 ᴘʟᴀʏ 🌷...**"
+                "**🤔 𝘎𝘪𝘷𝘦 𝘔𝘦 𝘈 𝘚𝘰𝘯𝘨 𝘕𝘢𝘮𝘦 𝘰𝘳 𝘠𝘰𝘶𝘛𝘶𝘣𝘦 𝘓𝘪𝘯𝘬 𝘵𝘰 𝘗𝘭𝘢𝘺...**"
             )
-        await lel.edit("**🔄 Aɴᴀʟʏsɪɴɢ ...**")
+        await lel.edit("**𝙋𝙡𝙚𝙖𝙨𝙚 𝙒𝙖𝙞𝙩 𝙄 𝙖𝙢 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜...**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -256,7 +258,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🔊 Mᴜsɪᴄ 😕 ɴᴏᴛ 📵 ғᴏᴜɴᴅ❗️\n💞 ᴛʀʏ ♨️ ᴀɴᴏᴛʜᴇʀ sᴏɴɢ 🌷...**"
+                "**𝘰𝘩-𝘚𝘯𝘢𝘱; 𝘚𝘰𝘯𝘨 𝘕𝘰𝘵 𝘍𝘰𝘶𝘯𝘥 𝘪𝘯 𝘠𝘰𝘶𝘛𝘶𝘣𝘦, 𝘛𝘳𝘺 𝘢𝘯𝘰𝘵𝘩𝘦𝘳 𝘰𝘯𝘦...**"
             )
             print(str(e))
             return
@@ -264,15 +266,15 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Telecat_X"),
-                InlineKeyboardButton("👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/MovieDomes"),
+                InlineKeyboardButton("𝘾𝙧𝙚𝙖𝙩𝙤𝙧", url=f"https://t.me/Telecat_X"),
+                InlineKeyboardButton("𝙂𝙧𝙤𝙪𝙥", url=f"https://t.me/MovieDomes"),
             ]
         ]
     )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 ᴘʟᴀʏ 🔊 ᴍᴜsɪᴄ 💿 ʟᴇss ⚡️\n🤟 ᴛʜᴀɴ ⚡️ {DURATION_LIMIT} 💞 ᴍɪɴᴜᴛᴇs ...**"
+                f"**𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘌𝘳𝘳𝘰𝘳: 𝘜𝘯𝘢𝘣𝘭𝘦 𝘵𝘰 𝘗𝘭𝘢𝘺 𝘚𝘰𝘯𝘨𝘴 𝘔𝘰𝘳𝘦 𝘛𝘩𝘢𝘯 {DURATION_LIMIT} 𝘔𝘪𝘯𝘶𝘵𝘦𝘴...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -286,7 +288,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**𝘼𝙖𝙢𝙞🌷 ᴀᴅᴅᴇᴅ 💿 sᴏɴɢ❗️\n🔊 ᴀᴛ ᴡᴀɪᴛɪɴɢ 💞 ᴘᴏsɪᴛɪᴏɴ » `{}` 🌷 ...**".format(position),
+            caption="**𝘚𝘰𝘯𝘨 𝘈𝘥𝘥𝘦𝘥 𝘵𝘰 𝘘𝘶𝘦𝘶𝘦 𝘢𝘵 𝘗𝘰𝘴𝘪𝘵𝘪𝘰𝘯 = `{}` ✅**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -303,7 +305,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🎸 ɴᴏᴡ 💞\n🔊 ᴘᴀʟʏɪɴɢ ᴀᴛ 😍 ʏᴏᴜʀ ɢʀᴏᴜᴘ 🥀 ...**".format(),
+            caption="** `{bn}` 𝘐𝘴 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘋𝘪𝘳𝘦𝘤𝘵𝘭𝘺 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘛𝘶𝘣𝘦 𝘔𝘶𝘴𝘪𝘤...**".format(),
            )
 
     os.remove("final.png")
@@ -317,7 +319,7 @@ async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
-                             caption="**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n▶️ ᴘᴀᴜsᴇᴅ ᴛᴏ ʀᴇsᴜᴍᴇ /resume 🌷 ...**"
+                             caption="**`{bn}`𝘚𝘰𝘯𝘨 𝘪𝘴 𝘊𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘗𝘢𝘶𝘴𝘦𝘥......**"
     )
 
 
@@ -328,7 +330,7 @@ async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
-                             caption="**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n⏸ Rᴇsᴜᴍᴇᴅ ᴛᴏ ᴘᴀᴜsᴇ /pause 🌷 ...**"
+                             caption="**`{bn}`𝘚𝘰𝘯𝘨 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘪𝘴 𝘙𝘦𝘴𝘶𝘮𝘦𝘥...**"
     )
 
 
@@ -343,7 +345,7 @@ async def skip(_, message: Message):
     for x in clientbot.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("**💥 Iᴛᴛᴜ 🤏 sᴇʏ 💞 ᴘᴀɢᴀʟ 🔇\n🚫 sᴏɴɢ ᴛᴏ ᴘʟᴀʏ ᴋᴇʀ 🌷 ...**")
+        await message.reply_text("**𝘚𝘰𝘯𝘨 𝘚𝘬𝘪𝘱𝘱𝘦𝘥 𝘵𝘰 𝘕𝘦𝘹𝘵...**")
     else:
         queues.task_done(chat_id)
         
@@ -362,7 +364,7 @@ async def skip(_, message: Message):
 
     await message.reply_photo(
                              photo="https://telegra.ph/file/113b6e72f70c128f48abb.jpg", 
-                             caption=f'**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🤞ɴᴏᴡ 🥀\n⏩ sᴋɪᴘᴘᴇᴅ 🌷 ...**'
+                             caption=f'**𝘚𝘰𝘯𝘨 𝘚𝘬𝘪𝘱𝘱𝘦𝘥 𝘵𝘰 𝘕𝘦𝘹𝘵...**'
    ) 
 
 
@@ -378,7 +380,7 @@ async def stop(_, message: Message):
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
-                             caption="**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n❌ ᴇɴᴅᴇᴅ 🌷 ...**"
+                             caption="**𝘚𝘰𝘯𝘨 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘚𝘵𝘰𝘱𝘱𝘦𝘥 𝘣𝘺 𝘺𝘰𝘶𝘳 𝘙𝘦𝘲𝘶𝘦𝘴𝘵...**"
     )
 
 
@@ -396,5 +398,5 @@ async def admincache(client, message: Message):
 
     await message.reply_photo(
                               photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png",
-                              caption="**𝘼𝙖𝙢𝙞🌷 ᴍᴜsɪᴄ 🤞 ɴᴏᴡ 🥀\n🔥 Rᴇʟᴏᴀᴅᴇᴅ 🌷 ...**"
+                              caption="**𝘙𝘦𝘭𝘰𝘢𝘥𝘦𝘥 𝘚𝘶𝘤𝘤𝘦𝘴𝘴𝘧𝘶𝘭𝘭𝘺...✅...**"
     )
