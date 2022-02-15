@@ -305,7 +305,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="** `{bn}` 𝘐𝘴 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘋𝘪𝘳𝘦𝘤𝘵𝘭𝘺 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘛𝘶𝘣𝘦 𝘔𝘶𝘴𝘪𝘤...**".format(),
+            caption="**𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘋𝘪𝘳𝘦𝘤𝘵𝘭𝘺 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘛𝘶𝘣𝘦 𝘔𝘶𝘴𝘪𝘤...**".format(),
            )
 
     os.remove("final.png")
@@ -319,7 +319,7 @@ async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
-                             caption="**`{bn}`𝘚𝘰𝘯𝘨 𝘪𝘴 𝘊𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘗𝘢𝘶𝘴𝘦𝘥......**"
+                             caption="**𝘚𝘰𝘯𝘨 𝘪𝘴 𝘊𝘶𝘳𝘳𝘦𝘯𝘵𝘭𝘺 𝘗𝘢𝘶𝘴𝘦𝘥......**"
     )
 
 
@@ -330,7 +330,7 @@ async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
-                             caption="**`{bn}`𝘚𝘰𝘯𝘨 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘪𝘴 𝘙𝘦𝘴𝘶𝘮𝘦𝘥...**"
+                             caption="**𝘚𝘰𝘯𝘨 𝘗𝘭𝘢𝘺𝘪𝘯𝘨 𝘪𝘴 𝘙𝘦𝘴𝘶𝘮𝘦𝘥...**"
     )
 
 
