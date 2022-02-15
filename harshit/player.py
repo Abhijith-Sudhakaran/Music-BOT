@@ -363,7 +363,7 @@ async def skip(_, message: Message):
 
 
     await message.reply_photo(
-                             photo="https://telegra.ph/file/113b6e72f70c128f48abb.jpg", 
+                             photo="https://te.legra.ph/file/313e7bc8b8f8a3ebe28ed.png", 
                              caption=f'**𝘚𝘰𝘯𝘨 𝘚𝘬𝘪𝘱𝘱𝘦𝘥 𝘵𝘰 𝘕𝘦𝘹𝘵...**'
    ) 
 
