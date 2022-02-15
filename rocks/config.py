@@ -8,6 +8,8 @@ que = {}
 admins = {}
 
 API_ID = int(getenv("API_ID"))
+BOT_NAME = getenv("𝙂𝙚𝙚𝙩𝙝𝙪🌷")
+ASSISTANT_NAME = getenv("@GeethuAssistant")
 API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "300"))
